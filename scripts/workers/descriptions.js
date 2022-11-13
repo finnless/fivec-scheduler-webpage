@@ -101,6 +101,7 @@ function generateAllDescriptions(all_desc_global, all_courses_global, loaded_cus
 
 		for (let instructor of course.instructors) {
 			instructor_node += `<span class="clickable-text" onclick="addSearchFilter(\'with:${instructor.trim().replace(/\s/g, "-")}\')">${instructor}</span>`;
+			instructor_node += ` <a class="clickable-text" href="https://www.ratemyprofessors.com/search/teachers?query=${instructor}">(RMP)</a>`;
 			
 			if (instructor != course.instructors[course.instructors.length - 1] && course.instructors.length > 1) {
 				if (course.instructors.length == 2) {
